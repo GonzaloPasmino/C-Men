@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#f4b83f" />
+    <title>C-Men — Nuestro rincón</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="grain"></div>
+
+    <header class="topbar">
+      <a class="brand" href="#" aria-label="Ir al inicio">
+        <span class="brand-mark">C</span>
+        <span>C-MEN</span>
+      </a>
+      <nav class="nav-links" aria-label="Navegación principal">
+        <a class="active" href="#inicio">Inicio</a>
+        <a href="#recuerdos">Recuerdos</a>
+        <a href="#planes">Planes</a>
+      </nav>
+      <button class="avatar-button" type="button" aria-label="Abrir perfil">
+        <span class="avatar">CM</span>
+      </button>
+    </header>
+
+    <main>
+      <section class="hero" id="inicio">
+        <div class="hero-copy">
+          <p class="eyebrow"><span></span> Grupo privado</p>
+          <h1>Esto es<br /><em>lo nuestro.</em></h1>
+          <p class="intro">El sitio donde quedan las anécdotas, los planes que salen a las 2 de la mañana y todo lo que nunca queremos olvidar.</p>
+          <button class="primary-button" id="newMoment" type="button">
+            <span>Compartir un momento</span>
+            <span class="button-arrow">↗</span>
+          </button>
+        </div>
+
+        <div class="hero-art" aria-label="Collage del grupo">
+          <div class="sun"></div>
+          <div class="photo-card photo-main">
+            <div class="photo-placeholder">
+              <span>+ Foto</span>
+            </div>
+          </div>
+          <div class="photo-card photo-small">
+            <div class="mini-stars">✦ ✦</div>
+          </div>
+          <div class="sticker sticker-top">LOS<br />MEJORES</div>
+          <div class="sticker sticker-bottom">desde 2026</div>
+        </div>
+      </section>
+
+      <section class="ticker" aria-label="Mensaje del grupo">
+        <div class="ticker-track">
+          <span>UNA FOTO VALE MUCHO</span><b>✦</b>
+          <span>UN PLAN VALE MÁS</span><b>✦</b>
+          <span>LOS MEJORES MOMENTOS JUNTOS</span><b>✦</b>
+          <span>UNA FOTO VALE MUCHO</span>
+        </div>
+      </section>
+
+      <section class="memories" id="recuerdos">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow dark"><span></span> Nuestro archivo</p>
+            <h2>Últimos recuerdos</h2>
+          </div>
+          <button class="text-button" type="button">Ver todos <span>→</span></button>
+        </div>
+
+        <div class="memory-grid">
+          <article class="memory-card card-yellow">
+            <div class="card-image">
+              <span class="card-number">01</span>
+            </div>
+            <div class="card-info">
+              <p>La última salida</p>
+              <span>24 nov 2026</span>
+            </div>
+          </article>
+
+          <article class="memory-card card-orange">
+            <div class="card-image">
+              <span class="card-number">02</span>
+            </div>
+            <div class="card-info">
+              <p>La mejor tarde</p>
+              <span>15 nov 2026</span>
+            </div>
+          </article>
+
+          <article class="memory-card card-blue">
+            <div class="card-image">
+              <span class="card-number">03</span>
+            </div>
+            <div class="card-info">
+              <p>Una noche cualquiera</p>
+              <span>02 nov 2026</span>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="next-plan" id="planes">
+        <div>
+          <p class="eyebrow dark"><span></span> Próximo plan</p>
+          <h2>¿Qué hacemos<br />la próxima vez?</h2>
+        </div>
+        <button class="round-button" type="button" aria-label="Proponer un plan">+</button>
+      </section>
+    </main>
+
+    <dialog id="momentDialog">
+      <form method="dialog">
+        <div class="dialog-heading">
+          <div>
+            <p class="eyebrow dark"><span></span> Nuevo recuerdo</p>
+            <h2>Comparte el momento</h2>
+          </div>
+          <button class="close-button" value="cancel" aria-label="Cerrar">×</button>
+        </div>
+        <label>
+          Título
+          <input id="momentTitle" name="title" type="text" placeholder="Ej. Noche de pizza" />
+        </label>
+        <label>
+          Comentario
+          <textarea name="comment" rows="4" placeholder="¿Qué pasó?"></textarea>
+        </label>
+        <button class="primary-button dialog-submit" value="default">
+          <span>Guardar recuerdo</span>
+          <span class="button-arrow">↗</span>
+        </button>
+      </form>
+    </dialog>
+
+    <script src="script.js"></script>
+  </body>
+</html>
